@@ -41,7 +41,7 @@ func RandStringRunes() string {
 	}
 	return string(b)
 }
-func (m msg) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
+func (msg) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	var param string = "null"
 	buf := string(req.URL.String())
 	params, _ := url.Parse(buf)
